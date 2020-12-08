@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+const _textoTitleCard = 'Cartão de Crédito';
+const _textoFaturaAtual = 'FATURA ATUAL';
+const _textoLimiteDisponivel = 'Limite disponível';
+const _textoUltimaCompraRecente = 'Compra mais recente em Mac Super Mercado no valor R\$ 30,00 sexta';
+
 class FirstCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,7 +33,7 @@ class FirstCard extends StatelessWidget {
                                 width: 5,
                               ),
                               Text(
-                                'Cartão de Crédito',
+                                _textoTitleCard,
                                 style: TextStyle(color: Colors.grey),
                               ),
                             ],
@@ -43,7 +48,7 @@ class FirstCard extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'FATURA ATUAL',
+                                  _textoFaturaAtual,
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                       color: Colors.teal,
@@ -68,7 +73,7 @@ class FirstCard extends StatelessWidget {
                                 ),
                                 Text.rich(
                                   TextSpan(
-                                    text: 'Limite disponível ',
+                                    text: '$_textoLimiteDisponivel ',
                                     children: [
                                       TextSpan(
                                           text: 'R\$ 2.200,95',
@@ -145,7 +150,7 @@ class FirstCard extends StatelessWidget {
                     ),
                     Flexible(
                       child: Text(
-                        'Compra mais recente em Mac Super Mercado no valor R\$ 30,00 sexta ',
+                        '$_textoUltimaCompraRecente ',
                         style: TextStyle(color: Colors.black, fontSize: 12),
                       ),
                     ),
